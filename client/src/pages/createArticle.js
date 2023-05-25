@@ -51,7 +51,7 @@ const CreateArticle = () => {
                         rows={5} style={{resize: 'none'}}
                         value={content} onChange={(e) => setContent(e.target.value)} required/>
                     </div>
-                    <button className="btn-primary" onClick={handleSubmit}>Publish</button>&nbsp;
+                    <button className="btn-primary" onClick={handleSubmit}>Post</button>&nbsp;
                     <button className="btn-white" onClick={reset}>Clear</button>
                 </div>
             </div>

@@ -3,6 +3,7 @@ import '../styles/articles.scss'
 import Axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Modal from './modal';
 
 
 const Articles = () => {
@@ -34,10 +35,13 @@ const Articles = () => {
                                     <Link to={`../pages/article/${article.article_id}`} style={{textDecoration:'none', color: 'black'}}>{article.title}</Link>
                                 </h1>
                             </div><hr /><br />
-                            <p style={{textAlign: 'center'}}>{article.content}</p>
+                            <p style={{textAlign: 'center'}}>
+                                {article.content.slice(0, 100) + (article.content.length > 100 ? "..." : "")}
+                            </p>
                             <br /><hr /><br />
-                            <button className='btn-danger' key={i}>Delete</button>
-                            <button>Comment</button>
+                            {/* <button className='btn-danger' key={i} onClick={() => {<Modal open={true}/>}}>Delete</button> */}
+                            <Modal articleID={article.article_id}/>
+                            {/* <button >Comment</button> */}
                         </div>
                     )
                 })}

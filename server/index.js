@@ -64,6 +64,35 @@ app.get("/api/get-article/:id", (req, res) => {
     });
 })
 
+app.get("/api/delete-article/:id", (req, res) => {
+    const id = req.params.id;
+    const sql = `UPDATE articles SET status = 'INACTIVE' WHERE article_id = ${id}`;
+
+    db.query(sql, (err, result) => {
+        res.send(result);
+    });
+})
+
+app.post("/api/add-comment", (req, res) => {
+    const articleID = req.body.articleID;
+    const userID = req.body.userID;
+    const comment = req.body.comment;
+    
+    const sql = "INSERT INTO comments(article_id, user_id, comment) VALUE (?, ?, ?)"
+    db.query(sql, [articleID, userID, comment], (err, result) => {
+        res.send(result);
+    });
+})
+
+app.get("/api/get-comments/:articleID", (req, res) => {
+    const id = req.params.articleID;
+    const sql = `SELECT comments.*, users.firstname, users.lastname FROM comments INNER JOIN users ON comments.user_id = users.id WHERE article_id = ${id} ORDER BY comments.date_created DESC;`;
+
+    db.query(sql, (err, result) => {
+        res.send(result);
+    });
+})
+
 app.listen(5000, () => {
     console.log("Server running at port 5000");
 })
