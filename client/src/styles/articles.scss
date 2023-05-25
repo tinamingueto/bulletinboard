@@ -1,0 +1,26 @@
+.articles{
+    margin-top: 3rem;
+    
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        row-gap: 1rem;
+        margin-top: 3rem;
+
+        .card{
+            background-color: white;
+            padding: 1rem;
+            border-radius: 15px;
+
+            .card-header{
+                display: inline
+            }
+        }
+    }
+}
+
+.create-article{
+    width: 75%;
+    margin: 3rem auto 0;
+}   

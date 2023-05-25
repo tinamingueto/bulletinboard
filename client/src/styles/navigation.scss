@@ -1,0 +1,47 @@
+.nav{
+    background-color: #27374D;
+    color: white;
+    padding: 1rem 0;
+    text-transform: uppercase;
+   
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        a{
+            text-decoration: none;
+            color: white;
+            h1{
+                font-family: 'Rowdies', cursive;
+                font-weight: 400;
+    
+                span{
+                    font-family: 'Rowdies', cursive;
+                    font-weight: 700;
+                    color: #9DB2BF;
+                }
+            }
+        }
+
+        ul{
+            list-style: none;
+
+            li{
+                display: inline;
+
+                a{
+                    text-decoration: none;
+                    color: white;
+                    padding: 15px 25px;
+                    border-radius: 5%;
+                    transition: 0.3s;
+
+                    &:hover{
+                        background-color: #182230;
+                    }
+                }
+            }
+        }
+    }
+}

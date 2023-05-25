@@ -1,0 +1,23 @@
+.login{
+    width: 50%;
+    margin: 5rem auto 0;
+    padding: 2rem;
+    background-color: #f9ffff;
+    box-shadow: 5px 5px 10px gray;
+    border-radius: 10px;
+
+    h1{
+        text-align: center;
+    }
+
+    .input{
+        margin-top: 1rem;
+    }
+    
+    button{
+        background: #526D82;
+        color: white;
+        width: 50%;
+        margin: 1rem 25% 0 ; 
+    }
+}

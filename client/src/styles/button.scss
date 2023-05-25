@@ -1,0 +1,42 @@
+button, a{
+    padding: 7px 25px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary{
+    background: #2a9920;
+    border: 1px solid #2a9920;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+
+    &:hover{
+        background: none;
+        color: #2a9920;
+    }
+}
+.btn-white{
+    background: white;
+    border: 1px solid gray;
+    color: gray;
+    border-radius: 5px;
+    transition: 0.3s;
+
+    &:hover{
+        background: gray;
+        color: white;
+    }
+}
+.btn-danger{
+    background: red;
+    border: 1px solid red;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+
+    &:hover{
+        background: red;
+        color: white;
+    }
+}
